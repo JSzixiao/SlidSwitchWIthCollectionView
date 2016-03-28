@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JSHorizontalCollectionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WwX-J9-aLQ" userLabel="top Collection View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sm6-Au-PT4">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="sON-HQ-8c8"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="cNS-yQ-feM"/>
+                    </connections>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bm9-cJ-g9C" userLabel="bottom Collection View">
+                    <rect key="frame" x="0.0" y="68.5" width="375" height="598"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Y1x-VH-Rnl">
+                        <size key="itemSize" width="0.0" height="0.0"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="abI-fA-zRP"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="wAq-gx-0W6"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bm9-cJ-g9C" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="45c-ro-bNc"/>
+                <constraint firstItem="bm9-cJ-g9C" firstAttribute="top" secondItem="WwX-J9-aLQ" secondAttribute="bottom" constant="2" id="8Cv-xz-pKB"/>
+                <constraint firstItem="bm9-cJ-g9C" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="CpF-cs-dzh"/>
+                <constraint firstItem="WwX-J9-aLQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KEX-cw-Bzm"/>
+                <constraint firstItem="WwX-J9-aLQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bCb-IV-AW3"/>
+                <constraint firstAttribute="bottom" secondItem="bm9-cJ-g9C" secondAttribute="bottom" id="jr3-tW-xtw"/>
+                <constraint firstItem="WwX-J9-aLQ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="nbw-3M-ING"/>
+                <constraint firstItem="WwX-J9-aLQ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1:10" id="pOa-kG-eeA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="bottomCollectionView" destination="bm9-cJ-g9C" id="Cdf-zr-ktu"/>
+                <outlet property="topCollectionView" destination="WwX-J9-aLQ" id="TKb-s5-IeP"/>
+            </connections>
+            <point key="canvasLocation" x="339.5" y="373.5"/>
+        </view>
+    </objects>
+</document>
