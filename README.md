@@ -1,0 +1,2 @@
+# SlidSwitchWIthCollectionView
+使用CollectionView实现滑动切换
