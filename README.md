@@ -163,14 +163,18 @@
 	}
 	```
 
+### 代码地址
+
+github地址：[https://github.com/JSzixiao/SlidSwitchWIthCollectionView](https://github.com/JSzixiao/SlidSwitchWIthCollectionView)
+
 ### 存在的问题
 
 1. 下方的视图暂时使用数组的方式赋值，但是感觉上不是太好，而且每个视图创建的时候布局比较让人头疼，这个如果修改为约束是不是会好一些？
 2. 上方的标题目前暂定是四个，如果少于四个的时候不太好看，考虑后期继续处理
 
+### License
 
-
-
+MIT
 
 
 
